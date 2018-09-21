@@ -1,0 +1,257 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  background: #fafaf0;
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+.espaciado {
+  letter-spacing: 4px;
+/*display: inline; */
+/*se comporta igual que <p>:
+  display: block;
+  margin-top: 16px;
+  margin-bottom: 16px;
+*/
+}
+
+.centrado {
+  width: 90%;
+  max-width: 1000px;
+  overflow: hidden;
+  margin: auto;
+}
+
+.seccion {
+  padding-top:100px;
+}
+
+
+header {
+/*display: block; */
+  background: rgb(30,30,30);
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: visible;
+/*overflow: hidden; /*<-- permite que el contenido del header nunca sobresalga*/
+/*position: fixed; /*<-- impide el desplazamiento al hacer scrolling*/
+  margin-bottom: 20px;
+  z-index: 10; /*<-- lo ubica por delante del resto de elementos*/
+  padding-top: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  transition: all 250ms ease-in;
+}
+
+div .logo {
+  color: #f0c413;
+  font-size:150%;
+  font-weight: bold;
+  float: left;
+  text-decoration: none;
+  transition: all 250ms ease-in;
+  text-transform: uppercase;
+/*margin-left: 10px;*/
+}
+
+div .logo a {
+  text-decoration: none;
+  color: #f0c413;
+  transition: all 250ms ease-in;
+  text-transform: uppercase;
+}
+
+div .logo p {
+  color: #bbb;
+  font-size: 75%;
+  font-weight: lighter;
+  font-variant: small-caps;
+  text-transform: capitalize;
+}
+
+header nav {
+  float: right;
+/*margin-right: 10px;*/
+}
+
+header nav a {
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  font-size: 100%;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: 600;
+  transition: all 250ms ease-in;
+}
+
+header nav a.here {
+/*background: rgba(235,80,5,0.7);*/
+  background: #fafaf0;
+  border-radius: 15px 15px 0px 0px;
+  padding: 10px 20px 41px;
+  cursor: default;
+  color: rgb(30,30,30);
+}
+
+header nav a:hover {
+  background: #20adb9;
+}
+
+header nav a.here:hover {
+  background: #61d3dd;
+}
+/*
+header nav a.here:hover {
+  background: rgb(235,80,5);
+}*/
+
+.header2 { /*<-- para cuando se scrollee hacia abajo*/
+  position: fixed; /*<-- impide el desplazamiento al hacer scrolling*/
+  height: auto;
+  padding-top: 15px;
+}
+
+.header2 div .logo {
+  font-size: 112%;
+}
+
+.header2 nav a {
+  padding: 7px 20px;
+  font-size: 75%;
+}
+
+@media screen and (max-width: 650px) { /*<-- cuando la pantalla disminuye a menos de 650px, se aplican estos cambios*/
+  header div .logo, header nav {
+    width: 100%;
+    text-align: center;
+  }
+
+  .header2 { /*<-- para cuando se scrollee hacia abajo*/
+    height: auto;
+  }
+
+  .header2 nav a {
+    padding: 7px 15px;
+    margin-bottom: 2px;
+  }
+}
+
+h1,h2,h3,h4,h5 {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/*probando css de bootstrap.min.css
+
+.container{
+  width:100%;
+  padding-right:15px;
+  padding-left:15px;
+  margin-right:auto;
+  margin-left:auto
+}
+
+@media (min-width:576px){
+  .container{
+    max-width:540px
+  }
+}
+@media (min-width:768px){
+  .container{
+    max-width:720px
+  }
+}
+@media (min-width:992px){
+  .container{
+    max-width:960px
+  }
+}
+@media (min-width:1200px){
+  .container{
+    max-width:1140px
+  }
+}
+
+.container-fluid{
+  width:100%;
+  padding-right:15px;
+  padding-left:15px;
+  margin-right:auto;
+  margin-left:auto
+}
+
+.navbar>.container,.navbar>.container-fluid{
+  display:-ms-flexbox;
+  display:flex;
+  flex-wrap:wrap;
+  -ms-flex-align:center;
+  align-items:center;
+  -ms-flex-pack:justify;
+  justify-content:space-between
+}
+
+@media print{
+  *,::after,::before{
+    text-shadow:none!important;
+    box-shadow:none!important
+  }
+  a:not(.btn){
+    text-decoration:underline
+  }
+  abbr[title]::after{
+    content:" (" attr(title) ")"
+  }
+  pre{
+    white-space:pre-wrap!important
+  }
+  blockquote,pre{
+    border:1px solid #adb5bd;
+    page-break-inside:avoid
+  }
+  thead{
+    display:table-header-group
+  }
+  img,tr{
+    page-break-inside:avoid
+  }
+  h2,h3,p{
+    orphans:3;
+    widows:3
+  }
+  h2,h3{
+    page-break-after:avoid
+  }
+  @page{
+    size:a3
+  }
+  body{
+    min-width:992px!important
+  }
+
+  .container{
+    min-width:992px!important
+  }
+
+  .navbar{
+    display:none
+  }
+  .badge{
+    border:1px solid #000
+  }
+  .table{
+    border-collapse:collapse!important
+  }
+  .table td,.table th{
+    background-color:#fff!important
+  }
+  .table-bordered td,.table-bordered th{
+    border:1px solid #dee2e6!important
+  }
+}
+*/
+

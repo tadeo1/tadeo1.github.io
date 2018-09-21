@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+<html lang="es">
+<head>
+
+    <meta charset="utf-8">
+    <title>Registro de usuario</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../images/icono.ico" type="image/x-icon">
+    <link type="text/css" rel="stylesheet" media="screen" href="../estilos.css">
+    <link type="text/css" rel="stylesheet" media="screen" href="estilos.css">
+    <script type="text/javascript" src="jquery-latest.js"></script>
+    <script type="text/javascript" src="scripts.js"></script>
+
+</head>
+<body>
+<!--
+    <p style="margin:5 left;display:inline"><a href=".." title="Inicio">Volver</a></p>
+    <header class="body">
+        <p class="espaciado">REGISTRO DE USUARIO</p>
+    </header>
+-->
+    <header class="">
+        <div style="width:95%;margin:auto;overflow:hidden">
+            <div class="logo"><a href=".." title="Pehache HomePage">PEHACHE<p>Inmobiliaria</p></a></div>
+            <nav>
+                <a href="#" onclick="desarrollo()" title="Nuestra oferta">Servicios</a>
+                <a href="#" onclick="desarrollo()" title="Acerca de nosotros">Empresa</a>
+                <a href="../contacto" title="¡Comuníquese!">Contacto</a>
+                <a class="here" title="¡Regístrese para obtener beneficios!">Registrarse</a>
+            </nav>
+        </div>
+    </header>
+    <section class="body">
+        <form method="post" action="submit.php" name="formreg">
+          <fieldset id="paso1" style="display:block">
+            <label>Nombre de usuario <a class="help" title="Campo obligatorio. Es el nombre con el cual iniciará sesión."><sup>?</sup></a></label>
+            <input type="name" name="username" id="username" maxlength="12" placeholder="Texto aquí" oninvalid="primerPaso()" autofocus required>
+
+            <label>Nombre <a class="help" title="Campo obligatorio. Son los nombres y apellidos con los que nosotros podremos tratarlo a usted."><sup>?</sup></a></label>
+            <input type="name" name="name" maxlength="20" placeholder="Texto aquí" oninvalid="primerPaso()" required>
+
+            <label>Apellido <a class="help" title="Campo obligatorio. Son los nombres y apellidos con los que nosotros podremos tratarlo a usted."><sup>?</sup></a></label>
+            <input type="name" name="surname" maxlength="20" placeholder="Texto aquí" oninvalid="primerPaso()" required>
+
+            <label>E-mail <a class="help" title="Campo obligatorio. Necesario para comunicarnos."><sup>?</sup></a></label>
+            <input type="email" name="mail" placeholder="email@ejemplo.com" oninvalid="primerPaso()" required>
+
+            <label>Contraseña <a class="help" title="Campo obligatorio. Es la contraseña con la cual iniciará sesión."><sup>?</sup></a></label>
+            <input type="password" name="pass1" id="pass1" maxlength="15" placeholder="Nueva contraseña" onkeyup="verifPass()" required>
+
+            <label>Confirmación de contraseña <a class="help" title="Introduzca de nuevo la misma contraseña para confirmarla."><sup>?</sup></a></label>
+            <input type="password" name="pass2" id="pass2" maxlength="15" placeholder="Contraseña" onkeyup="verifPass()" required>
+
+            <p id="matches" style="visibility:hidden">Las contraseñas deben coincidir.</p>
+
+            <button id="sig" style="visibility:hidden" onclick="segundoPaso(); return false;"><img src="images/flecha.png" alt="Siguiente" width="20px" height="20px">Siguiente</button>
+          </fieldset>
+          <fieldset id="paso2" style="display:none">
+            <p>Antes de finalizar el registro, puede rellenar los siguientes datos de su usuario para completar su información de contacto, o bien puede realizarlo mas tarde en la configuracion del perfil.</p>
+
+            <label>N° de teléfono <a class="help" title="Campo opcional. Proporciona otra vía de contacto. No contactaremos con este número sin antes comunicarse usted con nosotros."><sup>?</sup></a></label>
+            <input type="tel" name="celular" id="celular" maxlength="10" title="Solo se admiten numeros de Rosario, Argentina (341...)" pattern="341[0-9]{7}" value="" placeholder="Ej: 3419834752">
+
+            <label>Sexo <a class="help" title="Campo opcional."><sup>?</sup></a><br></label>
+            <input type="radio" name="sexo" class="sex" value="men"><p class="enlinea">Hombre</p>
+            <input type="radio" name="sexo" class="sex" value="women"><p class="enlinea">Mujer</p>
+            <input type="radio" name="sexo" class="sex" value="other" checked><p class="enlinea">Otro</p><br>
+
+            <button id="ant" onclick="primerPaso(); return false;"><img src="images/flecha.png" alt="Anterior" width="20px" height="20px" style="transform:rotate(180deg)">Cambiar datos</button>
+            <input type="submit" name="envio" class="sub" value="Registrarse">
+
+          </fieldset>
+        </form>
+    </section>
+
+    <footer class="body">
+        
+    </footer>
+
+    <script type="text/javascript" src="scripts.js"></script>
+
+</body>
+</html>
